@@ -27,7 +27,7 @@ body{
     display:block;
     margin: 0 auto;
     height: 10rem;
-    width: 10rem;
+    width: 12rem;
     object-fit: cover;
     border-radius: 10%;
 }
