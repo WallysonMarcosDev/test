@@ -5,23 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./fomulario.css">
     <title>Formulário</title>
 </head>
 <body>
 
     <section>
-        <h2>Contato</h2>
-        <form action="" method="post">
-            <label>Nome</label>
-            <input type="text" name="name" placeholder="Digite seu nome completo" autocomplete="off">
+        <h2>Formulário</h2>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <label>Nome completo</label>
+            <input type="text" name="name" placeholder="Nome completo" autocomplete="off" required>
+
+            <label>Telefone para contato</label>
+            <input type="tel" name="telefone" placeholder="Telefone" autocomplete="off" required>
+
+            <label>Cidade</label>
+            <input type="text" name="cidade" placeholder="Cidade" autocomplete="off" required>
+
+            <label>Estado</label>
+            <input type="text" name="estado" placeholder="Estado" autocomplete="off" required>
+
+            <label>Endereço</label>
+            <input type="text" name="endereco" placeholder="Endereço" autocomplete="off" required>
 
             <label>Email</label>
-            <input type="email" name="email" placeholder="Digite seu E-mail" autocomplete="off">
+            <input type="email" name="email" placeholder="Email" autocomplete="off" required>
 
+            <br>
+            <label for="estado">O que deseja?</label>
+            <select id="estado" name="estado">
+                <option value="atendente">Falar com atendente</option>
+                <option value="representante">Ser Representante</option>
+                <option value="empresa">Saber mais sobre nossa empresa</option>
+            </select>
+            <br>
+        
             <label>Mensagem</label>
             <textarea name="message" id="" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
 
             <button type="submit">Enviar</button>
+
+            <input type="hidden" name="accessKey" value="0018410a-4a6c-4159-92eb-68d6d8e01c7b">
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
         </form>
     </section>
     
